@@ -1,0 +1,42 @@
+/* Plynulé scrollování pro anchor odkazy v navigaci */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Pozadí sekcí */
+.bg-main    { background: linear-gradient(160deg, #06090f 0%, #0a1628 60%, #0d1f3c 100%); }
+.bg-service { background: #060d18; }
+
+/* Globální font pro celou stránku */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/*
+ * Panel systém — každá sekce je sticky a překrývá tu předchozí
+ * při scrollování, čímž vzniká efekt "skládání karet"
+ */
+.panel {
+    color: white;
+}
+
+.panel1 { background-color: #09080c; z-index: 1; }
+.panel2 { z-index: 2; }
+.panel3 { z-index: 3; }
+.panel4 { z-index: 4; }
+.panel5 { z-index: 5; }
+.panel6 { z-index: 6; }
+.panel7 { z-index: 7; }
+
+/* Desktop (1280px+) — sticky panel efekt */
+@media (min-width: 1280px) {
+    .panel  { position: sticky; top: 0; height: 120vh; }
+    .panel7 { height: auto; }
+}
+
+/* Canvas pro WebGL efekt Aurora v Hero sekci */
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
